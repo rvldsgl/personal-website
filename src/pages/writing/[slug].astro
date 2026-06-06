@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('writing', ({ data }) => !data.draft);
+  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: CollectionEntry<'writing'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+const allPosts = (await getCollection('writing', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const currentIndex = allPosts.findIndex(p => p.id === post.id);
+const prev = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+const next = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+
+  <div class="post-header">
+    <h1>{post.data.title}</h1>
+    <div class="post-meta">{formatDate(post.data.date)}</div>
+  </div>
+
+  <div class="post-body">
+    <Content />
+  </div>
+
+  <nav class="post-nav">
+    {prev
+      ? <a href={`/writing/${prev.id}`} class="prev">← {prev.data.title}</a>
+      : <span />}
+    {next
+      ? <a href={`/writing/${next.id}`} class="next">{next.data.title} →</a>
+      : <span />}
+  </nav>
+
+</BaseLayout>
