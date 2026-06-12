@@ -6,104 +6,108 @@ tags: ["data", "statistics", "indonesia"]
 draft: false
 ---
 
-There's a study that claims you are more likely to die on your birthday than any other day of the year.
+Here's a fun fact to ruin birthday parties with: you are statistically more likely to die on your birthday than any other day of the year.
 
-Not slightly more likely. Measurably, statistically more likely. Researchers in Switzerland tested it on 2.4 million people. The result: a 13.8% spike in deaths on birthdays. American researchers found the same thing. British researchers too. The effect keeps showing up, across countries, across decades.
+Researchers in Switzerland tested this on 2.4 million people. The result: a 13.8% spike in deaths on birthdays. American researchers confirmed it. British researchers too. It just keeps showing up.
 
-The theory is strange but weirdly believable. Some people psychologically hold on — delay death just long enough to reach a milestone they cared about. Others drink too much at the party. The stress of turning 60, or 70, or 80 tips something over the edge. Your body knows what day it is, in some biological or emotional way we don't fully understand.
+Nobody fully agrees on why. Some people psychologically hold on — refuse to die before reaching a milestone they cared about. Others blame the birthday itself: celebration, alcohol, the emotional weight of getting older. Whatever the reason, the data says birthdays are weirdly dangerous.
 
-I read about this a few months ago in [a piece by The Pudding](https://pudding.cool/2025/04/birthday-effect) — a data journalism publication that visualizes ideas with evidence. They tested it on 57,000 Massachusetts death records and found a 7% birthday spike. Immediately I thought: *has anyone tested this in Indonesia?*
+I found out about this through [The Pudding](https://pudding.cool/2025/04/birthday-effect), a data journalism site that tested it on 57,000 Massachusetts death records and got a clean 7% birthday spike. Reading it, I had one question:
 
-As far as I could find — no.
+*Has anyone tested this in Indonesia?*
 
-So I did it myself.
-
----
-
-## Getting the Data
-
-The original studies used government mortality records — tens of thousands of death certificates with both a birth date and a death date on file. Indonesia has this data too, held in the Dukcapil civil registration system. It's just not public.
-
-So I went with what was available: **Wikidata**, the structured database that sits behind Wikipedia. Every notable Indonesian — every politician, athlete, writer, musician, general, anyone significant enough to have a Wikipedia page — potentially has a birth date and death date recorded there.
-
-I wrote a script to pull all of them. The query was simple: give me every person with Indonesian citizenship, a precise birth date, and a precise death date. I asked for day-level precision specifically, which matters more than it sounds.
-
-Here's why: Wikidata stores some dates with only year-level accuracy. If they know someone died in 1952 but not exactly when, they'll store it as `1952-01-01`. If that person was also born on January 1st — or if their birth date similarly defaults to January 1st — the system would record them as dying on their birthday. Multiply that across hundreds of records and you get a completely fake birthday spike.
-
-The first time I ran my analysis without that precision filter, I got a **+2,161% birthday effect**. Which is obviously wrong.
-
-After filtering for only records where the exact day is known: **3,924 people**, deaths from 1902 to 2026, average age at death 67 years.
+As far as I could find — no. So I did it myself. I'm unemployed. I have time.
 
 ---
 
-## The First Test
+## Step 1: Get the Data (This Part Was Harder Than It Sounds)
 
-The logic is straightforward. For each person, I calculated one number: how many days was their death from their nearest birthday? Someone born March 7th who died March 10th gets +3. Someone who died February 28th gets -7. Every death gets mapped onto a scale from -182 to +182 days (roughly six months either side of the birthday).
+The proper way to do this is to get government death records — tens of thousands of death certificates, each with a birth date and death date. Indonesia has this data in the Dukcapil civil registration system. It is not public. I am not the government. Moving on.
 
-If birthdays don't matter at all, deaths should spread roughly evenly. About **10.7 people per day**.
+Instead I used **Wikidata** — the structured database behind Wikipedia. Every notable Indonesian with a Wikipedia page potentially has a birth date and death date recorded there. Politicians, athletes, writers, musicians, generals. Anyone significant enough for someone to have bothered writing a Wikipedia page about them.
+
+I wrote a script, hit their free API, and got the data.
+
+Here's where I almost embarrassed myself.
+
+The first time I ran the analysis, I got a **+2,161% birthday effect**. More than 21 times the expected rate. I spent about 10 minutes feeling like I had discovered something incredible before realizing the data was completely broken.
+
+The problem: Wikidata stores some dates with only year-level accuracy. If they know someone died in 1952 but don't know exactly when, they store it as `1952-01-01` — January 1st as a default. If that person was also born on January 1st (or their birth date had the same problem), the system sees them as dying on their birthday. Multiply that across hundreds of records and you get a fake spike so large it should have immediately told me something was wrong.
+
+I fixed it by filtering for only records where the exact day is actually known. The dataset went from 4,684 to **3,924 people**. The fake birthday spike disappeared. We could proceed with our lives.
+
+---
+
+## The Actual Test
+
+For each of the 3,924 people, I calculated one number: how many days from their nearest birthday did they die? Born March 7th, died March 10th — that's +3. Born March 7th, died February 28th — that's -7. Everyone gets mapped onto a scale from -182 to +182 days (about six months either side of their birthday).
+
+If birthdays don't matter, deaths should spread pretty evenly. About **10.7 people per day**.
 
 Here's what actually happened:
 
-![Distribution of deaths relative to birthday, from -6 months to +6 months. The red bar at the center is the birthday.](/images/birthday/01_birthday_distribution.png)
+![Distribution of 3,924 deaths across the year, relative to each person's birthday. The red bar is the birthday.](/images/birthday/01_birthday_distribution.png)
 
-The red bar at the center is day zero — the birthday itself.
+The red bar is the birthday. Day zero.
 
 **17 people** died on their birthday. Against an expected 10.7.
 
-That's +58% above average. The statistical test came back with **p = 0.047** — which means there's a 4.7% chance this result happened purely by random luck. The standard cutoff for calling something significant is 5%. So technically, we crossed the line.
+That's +58% above average. The statistical test (a binomial test — basically asking "how likely is this if the birthday is just a random day?") returned **p = 0.047**.
 
-But barely. This is the weakest possible version of a significant result. If two of those 17 birthday deaths turned out to be data entry errors, the finding evaporates. I wasn't satisfied.
+P-value means: how likely is this result if nothing special is actually happening? P = 0.047 means 4.7% likely — which sounds small, but the cutoff for "statistically significant" is 5%. So we technically passed. By a margin so thin you could slide it under a door.
+
+Remove two people from that birthday count and the result flips. Not great.
 
 ---
 
-## What If It's Not One Exact Day?
+## Okay But What If I'm Looking at This Wrong
 
-Think about what the birthday effect actually describes. It's not a timer that goes off at midnight. It's a fuzzy psychological and physiological phenomenon — stress building in the days before, celebration and alcohol on the day itself, emotional letdown after. That doesn't land on one precise calendar date.
+Here's the thing. The birthday effect — if it's real — probably doesn't work like a countdown timer. You don't die exactly at midnight on your birthday. If the effect exists, it probably spreads across the days around the birthday. Stress in the days before. Celebration and alcohol on the night. Emotional crash after.
 
-So I widened the window. Instead of just day 0, I looked at the whole birthday week: three days before, the birthday itself, three days after.
+So I tried the birthday week: three days before, the birthday, three days after.
 
-![Zoomed view of deaths ±30 days around the birthday](/images/birthday/02_birthday_zoomed.png)
+![Zoomed view of deaths in the ±30 days around the birthday](/images/birthday/02_birthday_zoomed.png)
 
 **93 people** died in that seven-day window. Expected: 75.3.
 
-That's **+23.6% above average**, with **p = 0.025**.
+**+23.6% above average. P = 0.025.**
 
-This is more convincing. P = 0.025 means there's only a 2.5% chance this is random noise. And unlike the single-day result, removing five or ten people from the window wouldn't flip the conclusion. The birthday week effect is more stable, more biologically intuitive, and statistically stronger.
-
----
-
-## The Part That Confused Me
-
-When I broke the results down by age group, something unexpected happened:
-
-![Birthday effect broken down by age group — under 60, 60-74, and 75+](/images/birthday/04_birthday_by_age.png)
-
-Every global study shows the birthday effect strongest in the elderly. The theory makes intuitive sense — an 80-year-old holding on to reach their 81st birthday is a real psychological phenomenon called the "anniversary reaction."
-
-Our data shows the opposite. The strongest effect is in people **under 60**, and it disappears entirely in the 75+ group.
-
-My best explanation: recording bias. When a young, prominent Indonesian dies unexpectedly — an accident, an illness, an assassination — the event gets documented carefully, the exact dates get recorded precisely. When an 80-year-old politician dies quietly, the date might get rounded to the nearest month or year in the records. So our "under 60" group has cleaner data, which happens to show the birthday signal more clearly.
-
-This is the limitation of working with Wikidata instead of proper mortality records.
+Now we're talking. 2.5% chance this is random noise. Removing ten people from the count doesn't flip the conclusion. This is the more convincing result, and honestly the more believable one — because "people die more in the vague week around their birthday" makes a lot more biological sense than "people die on the exact calendar date of their birthday."
 
 ---
 
-## What Can We Actually Conclude?
+## The Finding That Made Me Confused
 
-Let me be straight about what this data can and cannot say.
+When I broke the results down by age group, I expected the elderly to show the strongest effect. That's what every global study finds — older people holding on to reach one more milestone.
 
-**What it suggests:** There is a birthday effect in Indonesian notable people. Deaths cluster around the birthday more than random chance predicts. The birthday week result is statistically meaningful.
+Our data said the opposite.
 
-**What it can't prove:** Whether this is true for all Indonesians. Whether the effect is driven by psychology, biology, behavior, or some combination. Whether the under-60 finding is real or an artifact of how data gets recorded.
+![Birthday effect by age group — under 60, 60-74, and 75+](/images/birthday/04_birthday_by_age.png)
 
-**What a proper study would need:** Access to actual Indonesian civil registration data — millions of records, not thousands, with cause-of-death information and a correction for seasonal death patterns. Indonesia has this data. It's just not public.
+Under 60 showed the biggest spike. The 75+ group actually had *fewer* birthday deaths than average, which is the exact opposite of what the theory predicts.
 
-The 17 Indonesians who died on their exact birthday are real people. Arif Rahman Hakim, the student activist killed during the 1966 demonstrations — born February 24th, died February 24th, age 23. Ramadhan K.H., the poet and novelist — born March 16th, died March 16th, age 79. Oemar Seno Adji, the legal scholar — born December 5th, died December 5th, age 69.
+My best guess: recording bias. When a young prominent Indonesian dies unexpectedly, people pay attention. The exact date gets documented carefully. When an 80-year-old politician quietly passes, the date might get rounded to the nearest month in the records. So our dataset just has cleaner data for younger notable people — and cleaner data shows the birthday pattern more clearly.
 
-Real names. Real dates. A pattern that, across 3,924 people, shows up more than chance would predict.
-
-Is the birthday effect real in Indonesia? Probably yes — at least directionally. Is this analysis definitive proof? No. But it's a start, and the data is there for anyone who wants to do it properly.
+Which is a long way of saying: the data has limits and I cannot fully trust this finding. Very honest of me.
 
 ---
 
-*Data: Wikidata via SPARQL, filtered for day-level precision dates only. Statistical test: one-sided binomial test. Sample: 3,924 notable Indonesians, 1902–2026. Full code on [GitHub](https://github.com/rvldsgl).*
+## So What Did We Learn
+
+Look, I'm going to be real with you.
+
+The birthday effect is probably real in Indonesia, at least directionally. Deaths cluster around the birthday more than random chance predicts. The birthday week result holds up pretty well. P = 0.025.
+
+But this is 3,924 notable people from a public database — not a representative sample of 270 million Indonesians. The finding is suggestive, not conclusive. A proper study would need access to actual national mortality records, cause-of-death data, and more rigorous statistical controls.
+
+Indonesia has all of that data. It's just not public. Until it is, this is the best I can do with what's available.
+
+The 17 people who died on their exact birthday are real names in a real database. Arif Rahman Hakim, student activist, born February 24th, died February 24th 1966, age 23. Ramadhan K.H., poet and novelist, born March 16th, died March 16th 2006, age 79. Oemar Seno Adji, legal scholar, born December 5th, died December 5th 1984, age 69.
+
+Real people. Real dates. A pattern that shows up in the data.
+
+Make of that what you will. I'm going to go think about something less morbid.
+
+---
+
+*Data: Wikidata via SPARQL, filtered for day-level precision only. Statistical method: one-sided binomial test. n = 3,924 notable Indonesians, 1902–2026. Full code on [GitHub](https://github.com/rvldsgl/birthday-effect-id).*
