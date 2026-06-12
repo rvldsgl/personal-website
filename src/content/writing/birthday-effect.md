@@ -6,7 +6,7 @@ tags: ["data", "statistics", "indonesia"]
 draft: false
 ---
 
-Here's a fun fact to ruin birthday parties with: you are statistically more likely to die on your birthday than any other day of the year.
+Here's a fun fact to ruin (liven) birthday parties with: you are statistically more likely to die on your birthday than any other day of the year.
 
 Researchers in Switzerland tested this on 2.4 million people. The result: a 13.8% spike in deaths on birthdays. American researchers confirmed it. British researchers too. It just keeps showing up.
 
