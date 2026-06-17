@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Analytics } from '@vercel/analytics/astro';
 
 interface Props {
   title: string;
@@ -44,10 +45,11 @@ const currentPath = Astro.url.pathname;
     <footer>
       <span>&copy; {new Date().getFullYear()} Aldo</span>
       <div class="footer-links">
-        <a href="https://github.com/revaldo" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/revaldo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/rvldsgl" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/revaldosagala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="/rss.xml">RSS</a>
       </div>
     </footer>
+    <Analytics />
   </body>
 </html>

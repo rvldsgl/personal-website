@@ -106,7 +106,7 @@ The 17 people who died on their exact birthday are real names in a real database
 
 Real people. Real dates. A pattern that shows up in the data.
 
-Make of that what you will. I'm going to go think about something less morbid.
+Make of that what you will. 
 
 ---
 
