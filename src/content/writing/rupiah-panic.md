@@ -1,133 +1,127 @@
 ---
-title: "Rupiah Rp18.000: Orang Indonesia Panik Tidak?"
-description: "Ekonom mengukur dampak rupiah melemah lewat inflasi dan data perdagangan. Saya mengukurnya lewat apa yang orang Indonesia cari di Google. Hasilnya cukup mengejutkan."
+title: "Rupiah Hit 18,000. Did Indonesians Actually Panic?"
+description: "I don't know much about economics. But I do know how to check what people were Googling. So I did that instead."
 date: 2026-06-18
 tags: ["data", "indonesia", "economics"]
 draft: false
 ---
 
-Awal Juni 2026, rupiah tembus angka yang belum pernah terjadi sebelumnya: **Rp18.190 per dolar**.
+In early June 2026, the rupiah hit Rp18,190 per dollar.
 
-Bukan rekor biasa. Ini level terendah dalam sejarah modern Indonesia.
+That's a record. The weakest it's ever been in modern Indonesian history.
 
-Saya tinggal di sini. Saya merasakannya. Dan saya penasaran dengan satu pertanyaan yang tidak bisa dijawab oleh Bloomberg atau Bank Indonesia:
+I'm not an economist. I can't tell you about monetary policy or trade deficits or whatever. But I can tell you what people were Googling — and that's actually kind of interesting.
 
-*Apa yang orang Indonesia sebenarnya lakukan saat rupiah jatuh?*
-
-Bukan apa yang kata ekonom. Bukan proyeksi kebijakan moneter. Tapi tindakan nyata orang-orang biasa — yang bisa kita baca lewat apa yang mereka cari di Google.
+So that's what I did.
 
 ---
 
-## Caranya
+## The idea
 
-Saya ambil dua sumber data:
+Economists measure currency crises with official data: inflation rates, trade numbers, GDP. That stuff takes months to compile.
 
-**1. Kurs USD/IDR** — dari Yahoo Finance, harian, Januari sampai Juni 2026.
+But Google Trends is real-time. Every time someone in Indonesia types "beli dolar" into Google, that gets counted. And if a lot of people are suddenly Googling that at the same time — that's a signal. Not a perfect signal, but a signal.
 
-**2. Google Trends** — data pencarian mingguan dari Indonesia, untuk beberapa kata kunci:
-- `beli dolar` — panik beli dolar?
-- `kurs dollar` — cek kurs (versi finance-minded)
-- `kurs rupiah` — cek kurs (versi orang biasa)
-- `dollar naik` — sadar dolar lagi naik
-- `inflasi` — khawatir inflasi
-- `resesi` — takut resesi
+So I grabbed two things:
 
-Lalu saya plot keduanya dan lihat apa yang terjadi.
+1. **The actual USD/IDR exchange rate** — daily, January to June 2026
+2. **Google Trends data** for a bunch of Indonesian search terms — weekly
+
+Then I put them side by side and asked: *when the rupiah fell, what were people searching for?*
 
 ---
 
-## Gambaran Besarnya
+## How the rupiah moved
 
-Ini adalah perjalanan rupiah dari awal tahun:
+Here's what the exchange rate actually looked like this year:
 
 ![USD/IDR exchange rate January to June 2026 — showing the steady rise from Rp 16,668 to the historic peak of Rp 18,190 on June 9](/images/rupiah/01_overview.png)
 
-Awal Januari: Rp16.668. Cukup normal.
+January: Rp16,668. Pretty normal.
 
-Lalu rupiah mulai melemah perlahan dari Februari. Lompat lebih cepat dari Mei. Lalu tiba-tiba — dalam dua minggu terakhir Mei dan awal Juni — jatuh tajam menembus 18.000.
+Then it started creeping up. Slowly at first. Then faster in May. Then in the last two weeks of May and early June — it broke through Rp18,000 for the first time ever, and peaked at Rp18,190 on June 9.
 
-Katalis utamanya: ketegangan geopolitik di Timur Tengah mendorong harga minyak naik. Indonesia sebagai net importer minyak butuh lebih banyak dolar untuk bayar impor energi. Surplus perdagangan menyempit. Rupiah kehabisan buffer. Tembus Rp18.000.
-
-Sekarang pertanyaannya: apa yang terjadi di sisi perilaku manusia?
+Why? Short version: conflict in the Middle East pushed oil prices up. Indonesia imports a lot of oil, so it needed to buy more dollars to pay for that. More dollar demand + shrinking trade surplus = rupiah gets weaker. That's basically it.
 
 ---
 
-## Temuannya
+## What people were actually doing
 
-### "Beli dolar" meledak — seminggu sebelum rupiah menyentuh bottom
+### The most important chart
 
-Ini yang paling menarik:
+This one surprised me:
 
 ![Dual-axis chart: USD/IDR rate (red, daily) vs beli dolar Google searches (blue dashed, weekly). Searches peaked May 31 — 9 days before the rate peaked on June 9.](/images/rupiah/02_beli_dolar_vs_rate.png)
 
-Pencarian `beli dolar` mencapai puncaknya di **31 Mei** — sementara rupiah baru menyentuh level terburuknya pada **9 Juni**.
+The red line is the rupiah getting weaker. The blue dashed line is how many Indonesians were Googling "beli dolar" (literally: "buy dollars").
 
-Artinya orang sudah panik beli dolar **sebelum** rupiah benar-benar jatuh ke titik terdalam.
+Notice something? The blue line peaks on **May 31**. The red line peaks on **June 9**.
 
-Ini menarik karena menunjukkan dua hal:
-1. Publik sudah bisa "membaca" arah pergerakan dari berita-berita sebelumnya
-2. *Pencarian Google bisa jadi leading indicator* — sinyal yang muncul sebelum data ekonomi resmi rilis
+People were Googling "buy dollars" at maximum intensity **9 days before** the rupiah actually hit rock bottom.
 
-Korelasi `beli dolar` dengan kurs: **r = +0.805**. Sangat kuat.
+They saw it coming. Or at least, they felt it coming — and they were already trying to protect themselves before it got worst.
 
 ---
 
-### Panel lengkap semua kata kunci
+### All the search terms together
 
-Ini gambaran seluruh kata kunci yang saya track:
+Here's the full picture:
 
 ![Panel chart showing all 6 search terms against the exchange rate. beli dolar, kurs dollar, dollar naik, and kurs rupiah all spiked in May-June. Resesi peaked in January and didn't spike with the crash.](/images/rupiah/03_all_terms_panel.png)
 
-Beberapa hal yang menonjol:
+Let me walk through what each one means in plain English:
 
-**Yang spiked bersamaan dengan rupiah:**
-- `beli dolar` — r = +0.805
-- `kurs dollar` — r = +0.903 (tertinggi)
-- `kurs rupiah` — r = +0.903 (sama kuatnya)
-- `dollar naik` — r = +0.794
+**"Kurs dollar" and "kurs rupiah"** — literally just checking the exchange rate. These had the strongest connection to the rupiah falling (correlation = 0.9 out of 1.0). Makes sense. When the number on the screen goes crazy, people check the number on the screen.
 
-**Yang tidak bergerak seperti yang diharapkan:**
-- `resesi` — peaknya di **Januari**. Saat rupiah benar-benar jatuh di Mei-Juni, pencarian *resesi* justru relatif flat. Orang lebih khawatir soal resesi di awal tahun dibanding saat krisis kurs yang sebenarnya.
-- `inflasi` — r = +0.362. Ada korelasi, tapi lemah. Orang tidak langsung connect "rupiah lemah = inflasi."
+**"Beli dolar"** — buying dollars. When your currency is weakening, one way to protect your money is to convert it to a more stable currency. A lot of people were apparently thinking about this.
 
----
+**"Dollar naik"** — "dollar is rising." People searching this are basically just noticing what's happening and putting it into words.
 
-## Interpretasi
+**"Inflasi"** (inflation) — weak connection (0.36). People don't immediately think "inflation" when the rupiah falls, even though the two are related. The link isn't obvious to most people.
 
-Kalau kita baca data ini, ada cerita yang cukup jelas:
-
-Orang Indonesia yang aktif merespons krisis rupiah ini adalah orang-orang yang **langsung cari cara proteksi** — beli dolar, cek kurs. Bukan yang mikir panjang soal resesi atau inflasi.
-
-Yang menarik: `kurs dollar` dan `kurs rupiah` punya korelasi tertinggi (+0.903 keduanya). Ini masuk akal — saat kurs bergerak ekstrem, orang langsung buka Google dan ketik "kurs rupiah berapa sekarang." Itu refleks, bukan analisis.
-
-Sebaliknya, `resesi` yang justru peak di Januari bisa berarti: di awal tahun ada banyak wacana resesi global (tarif Trump, slowdown ekonomi), tapi saat krisis kurs aktual terjadi di Mei-Juni, orang sudah tidak fokus ke narasi itu — mereka fokus ke angka di layar HP.
+**"Resesi"** (recession) — this one's the most interesting. It peaked in **January** — months before the actual crisis. When the rupiah was genuinely crashing in May-June, people had basically stopped Googling "recession." They weren't thinking big picture anymore. They were just watching the number go up.
 
 ---
 
-## Caveats
+## What this actually tells us
 
-Saya harus jujur tentang keterbatasan ini:
+When the rupiah hit 18,000, Indonesians didn't respond by thinking about macroeconomics.
 
-**Google Trends hanya mengukur orang yang Google.** Bukan semua orang yang khawatir rupiah itu langsung buka Google. Banyak yang langsung telepon keluarga, WhatsApp grup arisan, atau diam-diam beli emas tanpa search apa pun.
+They did two things:
 
-**Data mingguan itu kasar.** Google Trends memberikan data per minggu untuk range ini, bukan harian. Jadi timing "peak May 31" sebenarnya berarti "puncaknya di minggu yang dimulai 31 Mei" — bisa jadi actual peak-nya di hari lain dalam minggu itu.
+1. **Checked the rate** — obsessively, judging by the search data
+2. **Looked into buying dollars** — trying to protect whatever savings they had
 
-**Korelasi bukan kausalitas.** Ini sudah klise, tapi tetap relevan. Rupiah melemah dan orang search `beli dolar` bisa jadi keduanya respons dari hal ketiga (berita yang sama), bukan satu yang menyebabkan yang lain.
+And they were already doing this before the rupiah hit its lowest point. Which means people were picking up on warning signs from the news and acting on them early — not waiting for official announcements.
 
----
-
-## Kesimpulan
-
-Ketika rupiah tembus Rp18.000 untuk pertama kalinya dalam sejarah modern, orang Indonesia meresponsnya dengan cara yang bisa diprediksi tapi tetap menarik untuk dikonfirmasi:
-
-Mereka cek kurs. Mereka cari cara beli dolar. Dan — ini yang saya rasa paling menarik — mereka melakukan ini **sebelum** kurs menyentuh titik terburuknya.
-
-Bukan ketakutan pasif. Ada antisipasi aktif.
-
-Apakah itu membuat situasinya lebih baik atau lebih buruk? Itu pertanyaan untuk ekonom lain. Saya cuma orang yang iseng download data sambil nungguin rupiah balik ke 16.000.
-
-*(Spoiler: belum balik.)*
+That's not panic exactly. It's more like… quiet anticipation. People knew something was wrong before the worst had happened.
 
 ---
 
-*Data: exchange rate dari Yahoo Finance, Google Trends data via Google Trends. Analisis dan visualisasi menggunakan Python. Kode lengkap di [GitHub](https://github.com/rvldsgl).*
+## Honest caveats
+
+I should be upfront about the limits here.
+
+**Google Trends only captures people who Google things.** Plenty of people worried about the rupiah and didn't search anything — they called their parents, asked in the family WhatsApp group, or just quietly moved money around without Googling first.
+
+**The data is weekly, not daily.** So when I say searches peaked "May 31," I mean in the week starting May 31 — the actual peak could have been any day that week.
+
+**Correlation isn't causation.** The searches and the exchange rate both moved at the same time, probably because they were both reacting to the same news. The searches didn't cause the rupiah to fall. The rupiah didn't cause people to Google things. Something else (geopolitics, oil prices) caused both.
+
+---
+
+## The short version
+
+The rupiah hit its worst level ever in June 2026.
+
+Before it got there, Indonesians were already Googling how to buy dollars.
+
+Nobody was thinking about "recession." They were just watching the number — and quietly trying to figure out what to do about it.
+
+I'm still waiting for it to get back to 16,000.
+
+*(It hasn't.)*
+
+---
+
+*Exchange rate data from Yahoo Finance. Google Trends data from Google Trends. Charts and analysis done in Python. Full code on [GitHub](https://github.com/rvldsgl/rupiah-panic).*
