@@ -55,9 +55,9 @@ Before we get back to who is better, we need to look at *how* they score.
 
 ![The Anatomy of a Goal](/images/messi-vs-ronaldo/06_anatomy.png)
 
-Ronaldo has scored 145 headers in his career. That is insane. He is arguably the greatest aerial threat in the history of the sport. 
+Ronaldo has scored over 150 headers in his career. That is insane. He is arguably the greatest aerial threat in the history of the sport. 
 
-Messi has 26. He is tiny. He doesn't jump. He just uses his left foot to pass the ball into the back of the net 700 times. 
+Messi has 28. He is tiny. He doesn't jump. He just uses his left foot to pass the ball into the back of the net over 750 times. 
 
 This is the first hint that they don't actually play the same position.
 
