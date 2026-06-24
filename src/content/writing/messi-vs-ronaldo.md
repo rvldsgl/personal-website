@@ -6,13 +6,12 @@ tags: ["data", "football", "messi", "ronaldo"]
 draft: false
 ---
 
-![Messi and Ronaldo](/images/messi-vs-ronaldo/hero_image.png)
+![Messi and Ronaldo](/images/messi-vs-ronaldo/messi_ronaldo_smoke_blunt.webp)
 
 The internet has been arguing about Lionel Messi and Cristiano Ronaldo for 20 years. 
 
 Usually, this turns into a screaming match about total goals and Ballon d'Ors. But comparing total goals is just lazy. Whoever plays more games will probably have more goals. It's just math.
 
-I wanted to build a data project that proved who was better once and for all. I tried to be objective. I mostly succeeded. But what the data actually showed was way more interesting than a simple "who is better" answer.
 
 So I grabbed their entire career stats, built some charts, and looked at the things nobody talks about.
 
