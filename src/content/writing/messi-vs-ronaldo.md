@@ -6,7 +6,7 @@ tags: ["data", "football", "messi", "ronaldo"]
 draft: false
 ---
 
-![Messi and Ronaldo](/images/messi-vs-ronaldo/hero_image.png)
+![Messi and Ronaldo](/images/messi-vs-ronaldo/messi_ronaldo_smoke_blunt.webp)
 
 I wanted to figure out, with data, who the GOAT actually is.
 
