@@ -1,6 +1,6 @@
 ---
-title: "I Tried to Settle the GOAT Debate With Data. It Didn't Go As Expected."
-description: "The internet has been arguing about Lionel Messi and Cristiano Ronaldo for 20 years. So I grabbed their entire career stats and looked at the things nobody talks about."
+title: "Messi vs Ronaldo, Mapped Out"
+description: "20 years of data, six charts, one conclusion — they're not competing for the same thing."
 date: 2026-06-24
 tags: ["data", "football", "messi", "ronaldo"]
 draft: false
