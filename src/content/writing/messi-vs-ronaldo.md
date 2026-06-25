@@ -130,4 +130,4 @@ The question isn't *who is the GOAT*. The question is *GOAT at what, exactly?*
 
 ---
 
-*All stats sourced from Statmuse, FBref, and FIFA official records. Charts built in Python. Full code and data on [GitHub](https://github.com/rvldsgl/messi-vs-ronaldo).*
+*All stats sourced from Statmuse, FBref, and FIFA official records. Charts built in Python. Full code and data on [GitHub](https://github.com/rvldsgl/messi-ronaldo-mapped-out).*
