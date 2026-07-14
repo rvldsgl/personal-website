@@ -6,13 +6,15 @@ tags: ["data", "career", "tech"]
 draft: false
 ---
 
-I've been applying for software engineering jobs for a while now.
+I've been applying for tech/data jobs for a while now.
 
-Mostly silence. The occasional rejection email. Sometimes a first round interview that just... stops.
+Mostly silence. Occasional rejections. The rare first-round interview that goes nowhere.
 
-At some point around midnight I had a thought that felt kind of embarrassing: *what if I had just become a plumber?*
+At some point around midnight, I had a thought: *what if I had just become a plumber?*
 
-Not seriously. Just — the thought showed up. And once it did I couldn't let it go. So I did what I do. I looked up the numbers.
+Not a crisis. Just a question: what if plumbing — an actual job with demand, decent pay, and no AI to replace you tomorrow — was actually the better choice?
+
+So I looked at the numbers.
 
 ---
 
