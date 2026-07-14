@@ -1,4 +1,4 @@
----
+﻿---
 title: "Is Being a Plumber Better Than Being a Software Engineer in 2026?"
 description: "I've been applying for tech jobs for months. One night I had a weird thought. So I looked it up."
 date: 2026-07-14
@@ -8,112 +8,116 @@ draft: false
 
 I've been applying for software engineering jobs for a while now.
 
-Mostly silence. Occasional rejections. The rare first-round interview that goes nowhere.
+Mostly silence. The occasional rejection email. Sometimes a first round interview that just... stops.
 
-At some point around midnight, I had a thought that felt slightly embarrassing to have: *what if I had just become a plumber?*
+At some point around midnight I had a thought that felt kind of embarrassing: *what if I had just become a plumber?*
 
-Not seriously. Just — the thought showed up. And once it did, I couldn't stop thinking about it. So I did what I always do when I can't stop thinking about something. I pulled the data.
+Not seriously. Just — the thought showed up. And once it did I couldn't let it go. So I did what I do. I looked up the numbers.
 
 ---
 
 ## The advice wasn't wrong
 
-Here's the thing I want to be clear about before anything else: the people who told me to go into tech weren't lying.
+Before I get into it — the people who told me to go into tech weren't lying.
 
-In 2019, the data genuinely supported it. Coding bootcamps were reporting placement rates above 80%. Graduates were getting hired. The "learn to code and get a job" narrative was everywhere — LinkedIn posts, YouTube videos, your uncle at family dinner. And it made sense, because it was roughly true.
+In 2019 the numbers actually backed it up. Bootcamps were saying 80%+ of graduates got jobs. People were getting hired. "Learn to code" was on every YouTube channel, every LinkedIn post, your uncle at lebaran. And it made sense, because it was basically true.
 
-Bootcamp enrollment numbers backed it up. According to Course Report, about 18,000 people graduated from full-time coding bootcamps in 2019. By 2020 that number jumped to 25,000 — a 39% increase in a single year, partly because COVID pushed everything online.
+About 18,000 people graduated from coding bootcamps in 2019. By 2020 that jumped to 25,000 — a 39% jump in one year, mostly because COVID pushed everything online and everyone had time to learn stuff.
 
-People were betting on tech. And at that point, the bet was paying off.
+The bet made sense. And for a while, it was paying off.
 
 ---
 
 ## Then two things happened at the same time
 
-The first thing: supply kept going up.
+First: more and more people kept getting into tech.
 
-More bootcamps. More CS graduates. More people pivoting into tech during the pandemic, learning to code from YouTube, finishing online courses, adding Python to their LinkedIn. The number of people competing for junior developer jobs kept climbing.
+More bootcamp grads. More CS graduates. More people who spent the pandemic on YouTube and Udemy and called themselves developers. The number of people applying for junior dev jobs kept going up.
 
-The second thing: demand for junior work started going away.
+Second: the jobs themselves started disappearing.
 
-GitHub Copilot launched in June 2022. ChatGPT came out in November 2022. GPT-4 in March 2023. These tools didn't replace senior engineers — they replaced the kind of work that used to be a good first job. Writing boilerplate. Generating CRUD operations. Fixing basic bugs. The stuff you learned in a bootcamp.
+GitHub Copilot came out June 2022. ChatGPT November 2022. GPT-4 March 2023. These tools didn't touch senior engineers — they took over the stuff that used to be entry-level work. Writing basic code, fixing small bugs, building simple features. The exact stuff you learn in a bootcamp.
 
-Junior developers got hit from both sides. More competition coming in. Less work available on the other end.
+Junior developers got squeezed from both sides at once. More people competing for fewer spots.
 
-And more recently, companies have started saying it out loud. Layoffs explicitly attributed to AI have been rising fast — Q1 and Q2 2026 are the biggest quarters on record for AI-cited workforce reductions.
+And then companies started being honest about why. Layoffs blamed on AI went up by 332% in 2025. By 2026 it's the biggest it's ever been.
 
-![Tech layoffs attributed to AI vs non-AI, quarterly. AI-attributed share growing rapidly in 2026.](/images/plumber-vs-dev/layoffs_ai.png)
+![Tech layoffs attributed to AI vs non-AI, quarterly.](/images/plumber-vs-dev/layoffs_ai.png)
 
 ---
 
 ## The numbers
 
-I want to be careful here. I'm one person with publicly available datasets, not a labor economist. But the direction is pretty clear.
+I want to be upfront: I'm just one person with public datasets. I'm not an economist. But the direction is hard to argue with.
 
-**Tech layoffs:** According to layoffs.fyi, about 265,000 tech workers were laid off in 2023 alone. That's the peak — before that, 165,000 in 2022. After that, 153,000 in 2024, 123,000 in 2025. We're talking about roughly 700,000 tech workers losing their jobs in four years.
+**Tech layoffs:** layoffs.fyi tracked about 265,000 tech workers laid off in 2023. That was the worst year. Before that, 165,000 in 2022. Then 153,000 in 2024, 123,000 in 2025. In four years that's roughly 700,000 people.
 
-![Tech layoffs since COVID-19 — quarterly. The peak is clearly visible around Q1 2023.](/images/plumber-vs-dev/layoffs_covid.png)
+![Tech layoffs since COVID-19, quarterly.](/images/plumber-vs-dev/layoffs_covid.png)
 
-**Bootcamp outcomes:** The Council on Integrity in Results Reporting (CIRR) audits bootcamp placement data independently. Their number: 71% of graduates get a job within 180 days. That's often presented as a success story. But it also means 29% don't get a qualifying job within six months. That number never shows up in the marketing.
+**Bootcamp placement:** An independent auditor called CIRR checks bootcamp numbers. Their finding: 71% of graduates get a job within 6 months. Bootcamps love to lead with that number. But flip it around — 29% don't. And "got a job" includes part-time, freelance, and QA roles — not just software engineer positions.
 
-**Junior salaries:** I ran the Stack Overflow Developer Survey data — they've published it annually since 2019. In 2019, the median salary for US developers with 0–2 years of experience was $75,000. In 2025: $74,000. Sounds fine. But the floor dropped — the 25th percentile went from $60,000 to $40,000. The people at the bottom got hit hardest.
+**Junior salaries:** I downloaded the Stack Overflow Developer Survey for 2019 and 2025 and ran the numbers myself. Median pay for junior US developers (0–2 years): $75,000 in 2019. $74,000 in 2025. Sounds the same right?
 
-![Junior developer salary comparison 2019 vs 2025 — floor dropped from $60k to $40k](/images/plumber-vs-dev/03_salary.png)
+But look at the bottom. The 25th percentile — the people doing worst — dropped from $60,000 to $40,000.
 
-Here's the one that actually surprised me though: in the 2019 survey, there were **1,857 junior US developers** who responded. In 2025, that number is **58**.
+![Junior developer salary comparison 2019 vs 2025.](/images/plumber-vs-dev/03_salary.png)
 
-![Junior US developers in SO Survey (0-2 years experience): 1,857 in 2019 vs 58 in 2025](/images/plumber-vs-dev/02_junior_count.png)
+The people at the top are mostly fine. The people at the bottom are getting paid a lot less.
+
+And here's the one that actually got me. In the 2019 SO Survey, **1,857** junior US developers responded. In 2025: **58**.
+
+![Junior US developers in SO Survey: 1,857 in 2019 vs 58 in 2025.](/images/plumber-vs-dev/02_junior_count.png)
 
 Fifty-eight.
 
-I'm not entirely sure what that means. Maybe junior developers stopped taking surveys. Maybe they don't identify as developers yet because they're still looking. Maybe there just aren't that many of them actively working. Probably some combination. But 1,857 down to 58 is hard to explain away.
+Maybe they stopped taking surveys. Maybe they don't think of themselves as developers yet because they're still looking. I don't know for sure. But 1,857 down to 58 is hard to explain away.
 
-One more thing worth noting honestly: BLS projects software developer jobs to grow 15% through 2034. That's "much faster than average." So tech isn't dying. It's just that the growth is happening at the senior end. The entry-level pipeline has tightened.
+One honest thing I should say: BLS says software dev jobs will grow 15% by 2034. So tech isn't dead. It's growing. It's just growing at the top, not at the bottom where most people are trying to get in.
 
 ---
 
 ## So what about the plumber
 
-I actually looked this up. Here's what BLS says about plumbers, pipefitters, and steamfitters in 2024:
+I actually looked this up. Here's what the US Bureau of Labor Statistics says for 2024:
 
-Median pay: **$62,970 per year.**
+Median pay: **$62,970 a year.**
 
-Projected annual job openings: **44,000.**
+Projected job openings each year: **44,000.**
 
-The 4% job growth projection sounds modest, but those 44,000 openings per year aren't mainly from growth — they're from retirement. The existing workforce is aging out and there aren't enough people coming in to replace them. It's a shortage, not a boom.
+The growth rate is only 4% — not exciting. But those 44,000 openings aren't from growth. They're from retirement. The people doing this job right now are getting old, and not enough young people are coming in to replace them. There's a real shortage.
 
-The entry path is also different from what I expected. You do an apprenticeship — which typically takes 4 to 5 years. But you get paid while you're doing it. Compare that to a coding bootcamp where you pay $15,000 upfront, or a four-year degree that costs considerably more.
+The path in is also different from what I assumed. You do an apprenticeship — usually 4-5 years. But you get *paid* while you do it. Compare that to a bootcamp where you pay $15,000 before you know if you'll get a job.
 
-The work can't be done remotely. It can't be offshored. And for now at least, it can't be automated — pipes break in specific locations, in specific conditions, in ways that require someone to physically be there and figure it out.
+And the work can't be done from a laptop in Bali. Can't be sent to a cheaper country. Can't (yet) be done by a robot — because pipes break in specific places, in specific ways, and you need to physically be there to fix them.
 
-![Plumber vs Software Developer 2024 — median pay and annual job openings](/images/plumber-vs-dev/04_comparison.png)
+![Plumber vs Software Developer 2024 — median pay and annual job openings.](/images/plumber-vs-dev/04_comparison.png)
 
-I'm not saying it's easy work. I'm not saying it's for everyone. I'm saying I never actually thought to compare these things side by side when I was deciding what to do.
+I'm not saying it's easy. I'm not saying it's for everyone. I'm saying I never thought to compare until now.
 
 ---
 
-## Why didn't anyone say this
+## Why didn't anyone tell me this
 
-I think the answer is pretty simple: the people giving career advice mostly live in the same world as the people getting it.
+The people giving career advice live in the same bubble as the people getting it.
 
-Everyone online works in tech. Career advice content is made by people in tech. Bootcamps had VC money and a strong incentive to run aggressive marketing. The "learn to code" narrative dominated because the people repeating it were the people who had already won from it.
+Everyone who writes about careers online works in tech. Bootcamps had money behind them and a reason to market hard. "Learn to code" spread because the people saying it were the ones who already made it work.
 
-There's also a lag. The advice that got handed down in 2022 was based on 2019 conditions. By the time the job market actually shifted, the advice hadn't caught up. It takes years for a narrative to update. People are still sending their kids to bootcamp.
+There's also just a delay. The advice people were giving in 2022 was based on how things looked in 2019. By the time the market shifted, nobody updated the script. People are still telling their kids to do bootcamps.
 
-I followed advice that was reasonable when it was given. It just might have been two or three years out of date by the time I followed it.
+I followed advice that was probably fine when it was given. It just might have been 3 years out of date by the time it reached me.
 
 ---
 
 ## What I actually think
 
-I'm not going to tell you to become a plumber. That would be a weird conclusion to draw from a survey dataset and some BLS tables.
+I'm not going to tell you to become a plumber. That would be a weird conclusion from some spreadsheets.
 
-What I think is this: I asked "should I go into tech?" and compared it to basically nothing. I didn't look at the trades. I didn't run the numbers on anything else. I just followed the gravity of the advice around me.
+What I think is: when I decided to go into tech, I compared it to nothing. I didn't look at the alternatives. I just went where everyone said to go.
 
-If I was making the same decision today, I'd at least ask the question.
+If I was deciding now, I'd at least ask the question.
 
-The data is what it is. Tech still has a higher ceiling if things go well. Plumbing has a more predictable floor. For someone going in because it seemed safe — which is why most people do anything — the floor matters more than the ceiling.
+Tech still has a higher ceiling if you make it. Plumbing has a more predictable floor. For someone who went in because it "seemed safe" — which is honestly why most people do anything — the floor probably matters more than the ceiling.
 
 ---
 
-*Data sources: Stack Overflow Developer Survey 2019 and 2025 (raw CSV). Bureau of Labor Statistics Occupational Outlook Handbook. Layoffs.fyi. CIRR audited bootcamp outcomes via Course Report. All analysis done in Python.*
+*Data: Stack Overflow Developer Survey 2019 and 2025 (raw CSV). US Bureau of Labor Statistics. Layoffs.fyi. CIRR bootcamp outcomes. All analysis in Python.*
